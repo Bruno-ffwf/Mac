@@ -10,16 +10,23 @@ export const GlobalStyle = createGlobalStyle`
 
 .he{
     background-color: white;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: space-between
     display: flex;
-    flex-direction: row;
-    justify-content: space-between
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     
 }
 
 .imglogo{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    //margin-left: 20px;
+    //margin-bottom: 20px;
+    //margin-top: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .seche{
@@ -34,23 +41,61 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     margin-right: 10px;
     padding-right: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.imghe{
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .he {
+    flex-direction: column;
+  }
+
+  .seclogo, .seche {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .buttonhe {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonhe {
+    flex-direction: column;
+  }
+
+  .imghe {
+    margin: 10px 0;
+  }
 }
 
 .buttonhe{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 163px;
-    height: 45px;
-    border-radius: 8px;
+    //align-items: center;
+    //display: flex;
+    //justify-content: space-between;
+    //width: 163px;
+    //height: 45px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
     background-color: #ffc72c;
     border: none;
     cursor: pointer;
-    padding-left: 10px;
+    //padding-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .seclogo{
-    margin-top: 10px;
+    //margin-top: 10px;
+    flex: 1;
 }
 
 .body{
@@ -58,19 +103,41 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 .bateu{
-    width: 530px;
-    height: 121px;
-    top: -100px;
-    left: 15px;
+    //width: 530px;
+    //height: 121px;
+    //top: -100px;
+    //left: 15px;
     font: Inter;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 60.51px;
+    //font-weight: 800;
+    font-size: 2em;
+    //line-height: 60.51px;
+}
+
+@media (max-width: 480px) {
+    .bateu{
+        font-size: 1em;
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .secma {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imgma{
+        order: 1;
+        width: 80%;
+    }
 }
 
 .imgma{
-    width: 324.04px;
-    height: 300px;
+    //width: 324.04px;
+    //height: 300px;
+    max-width: 100%;
+    height: auto;
     top: -201px;
     left: -491px;
     margin-left: 20px;
@@ -82,7 +149,11 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    padding: 20px;
 }
+
+
 
 .bigmac{
     width: 118.57px;
@@ -117,24 +188,23 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     justify-items: center;
-    
 }
+
 
 .secm2{
-
     background-color:#FEB706;
-    height: 561px;
-    top: 335px;
-    left: -542;
-    text-align: center;
    display: flex;
-   justify-content: space-between;
-   padding-left: 20px;
-   padding-right: 20px;
-   padding-top: 100px;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 20px;
 }
 
-
+@media (max-width: 480px) {
+    .secm2{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 .promo{
     color: white;
@@ -153,49 +223,68 @@ export const GlobalStyle = createGlobalStyle`
     background-color: white;
     width: 281px;
     height: 350px;
-    top: 501px;
-    left: -467px;
+    padding: 10px;
+    //top: 501px;
+    //left: -467px;
     border-radius: 20px;
+    flex: 1 1 300px;
+    margin: 10px;
+    text-align: center;
+}
 
+.divimg img{
+    max-width: 100%;
+    height: auto;
 }
 
 .figimg{
     font: Roboto;
     font-weight: 700;
     font-size: 20px;
-    line-height: 23.44px;
-    padding-bottom: 30px
+    //line-height: 23.44px;
+    //padding-bottom: 30px
+    margin-top: 10px;
 }
 
 .butimg{
 background-color: #FEB706;
 width: 162px;
 height: 41px;
-top: 729px;
-left: -411px;
+//top: 729px;
+//left: -411px;
 border-radius: 10px;
+margin-top: 10px;
 cursor: pointer;
 }
 
 
 footer{
-    height: 71px;
-    top: 896px;
-    left: -543px;
+    //height: 71px;
+    //top: 896px;
+    //left: -543px;
+    //display: flex;
+    //justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 20px;
+    background-color: #f2f2f2;
 }
 
 .divfoo{
-    display: flex;
-    flex-direction: row;
-    padding-top: 25px;
-    padding-left: 25px;
+    //display: flex;
+    //flex-direction: row;
+    //padding-top: 25px;
+    //padding-left: 25px;
+    flex: 1;
+    text-align: center;
 }
 
 .fooimg{
-    width: 23.53;
-    height: 20px;
+    //width: 23.53;
+    //height: 20px;
+    max-width: 100%;
+    height: auto;
     
 }
 
@@ -205,14 +294,35 @@ footer{
 }
 
 .app{
-    width: 129px;
-    height: 40px;
+    //width: 129px;
+    //height: 40px;
     padding-left: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .divfoo, .divfoo2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    .app{
+        margin: 10px 0;
+    }
 }
 
 .divfoo2{
-padding-top: 15px;
-padding-right: 25px;
+//padding-top: 15px;
+//padding-right: 25px;
+flex: 1;
+text-align: center;
 }
 
 `
